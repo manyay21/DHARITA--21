@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: 43 78% 95%; /* #fdfbf3 floral white */
+    --background: 48 71% 97%; /* #fdfbf3 floral white */
     --foreground: 222.2 84% 4.9%; /* Default dark text */
 
     --card: 0 0% 88%; /* #e0e0e0 soft gray for card background */
