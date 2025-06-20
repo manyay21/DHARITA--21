@@ -1,5 +1,5 @@
 import { ServiceCard } from "./ServiceCard";
-import { Building, ShieldCheck, HomeIcon } from "lucide-react"; // Using HomeIcon as a proxy for virtual property
+import { Building, ShieldCheck, HomeIcon } from "lucide-react";
 
 const services = [
   {
@@ -15,6 +15,7 @@ const services = [
     description:
       "Revolutionize Residential Security with Smart Entry & Instant Emergency Alerts. Control Visitor Access and Protect Your Community with One Powerful App.",
     ctaLabel: "Discuss Security Solutions",
+    link: "/design.html", // ✅ Link for "Learn More"
   },
   {
     icon: HomeIcon,
@@ -22,6 +23,7 @@ const services = [
     description:
       "Immersive VR/AR tours and digital stagings that allow clients to experience properties remotely like never before.",
     ctaLabel: "Explore Virtual Tours",
+    link: "/VRspace.html", // ✅ Link for "Learn More"
   },
 ];
 
@@ -54,6 +56,7 @@ export function ServicesSection({ onOpenContactModal }: ServicesSectionProps) {
               description={service.description}
               ctaLabel={service.ctaLabel}
               onCtaClick={onOpenContactModal}
+              link={service.link} // ✅ Pass the link here
             />
           ))}
         </div>
