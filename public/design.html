@@ -16,7 +16,6 @@
         font-family: "Inter", sans-serif;
         background-color: #0b2d6e; /* Darkest Blue from Palette */
         color: #e6f1ff; /* Light text for contrast */
-        overflow: hidden;
         margin: 0;
         padding: 0;
       }
@@ -33,10 +32,9 @@
         padding: 2rem;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.8s ease-in-out, visibility 0.8s;
-        transform: translateY(20px);
         transition: opacity 0.8s ease-in-out, visibility 0.8s,
           transform 0.8s ease-in-out;
+        transform: translateY(20px);
       }
       .slide.active {
         opacity: 1;
@@ -178,6 +176,1017 @@
       .modal-content::-webkit-scrollbar-thumb {
         background-color: #6ba2ff; /* Light Accent Blue */
         border-radius: 20px;
+      }
+      /* Responsive Breakpoints */
+      @media (max-width: 1024px) {
+        .slide {
+          padding: 1.5rem;
+        }
+        .phone-mockup {
+          width: 240px;
+          height: 480px;
+          padding: 12px;
+        }
+        .modal-content {
+          padding: 1.5rem;
+          max-width: 90vw;
+        }
+        h1 {
+          font-size: clamp(3rem, 8vw, 6rem) !important;
+        }
+        h2 {
+          font-size: clamp(2rem, 6vw, 4rem) !important;
+        }
+        .text-6xl {
+          font-size: clamp(2.5rem, 10vw, 4rem) !important;
+        }
+        .text-8xl {
+          font-size: clamp(3rem, 12vw, 6rem) !important;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .slide {
+          padding: 1rem;
+        }
+        .phone-mockup {
+          width: 220px;
+          height: 440px;
+          padding: 8px;
+        }
+        .modal-content {
+          padding: 1rem;
+          max-width: 95vw;
+        }
+        .grid {
+          grid-template-columns: 1fr !important;
+        }
+        .flex {
+          flex-direction: column !important;
+        }
+        .text-5xl {
+          font-size: 2.5rem !important;
+        }
+        .text-4xl {
+          font-size: 2rem !important;
+        }
+        .text-2xl {
+          font-size: 1.5rem !important;
+        }
+        .text-xl {
+          font-size: 1.25rem !important;
+        }
+        .gap-8 {
+          gap: 1rem !important;
+        }
+        .gap-12 {
+          gap: 1.5rem !important;
+        }
+        .mb-12 {
+          margin-bottom: 2rem !important;
+        }
+        .mt-12 {
+          margin-top: 2rem !important;
+        }
+        .p-6 {
+          padding: 1rem !important;
+        }
+        .py-3 {
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+        .px-8 {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
+        .w-80 {
+          width: 100% !important;
+          max-width: 320px !important;
+        }
+        .h-80 {
+          height: 320px !important;
+        }
+        .w-24 {
+          width: 4rem !important;
+        }
+        .h-24 {
+          height: 4rem !important;
+        }
+        .w-20 {
+          width: 3rem !important;
+        }
+        .h-20 {
+          height: 3rem !important;
+        }
+        .w-16 {
+          width: 2.5rem !important;
+        }
+        .h-16 {
+          height: 2.5rem !important;
+        }
+        .w-12 {
+          width: 2rem !important;
+        }
+        .h-12 {
+          height: 2rem !important;
+        }
+        .w-8 {
+          width: 1.5rem !important;
+        }
+        .h-8 {
+          height: 1.5rem !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .slide {
+          padding: 0.5rem;
+          min-height: 100vh;
+          height: auto;
+          position: static;
+        }
+        .phone-mockup {
+          width: 100vw;
+          max-width: 320px;
+          height: 400px;
+          min-width: 0;
+          border-radius: 24px;
+          padding: 4px;
+        }
+        .modal-content {
+          padding: 0.5rem;
+          max-width: 99vw;
+          border-radius: 0.5rem;
+        }
+        .nav-arrow {
+          top: unset;
+          bottom: 1rem;
+          transform: none;
+          padding: 0.5rem;
+        }
+        #prevBtn {
+          left: 1rem;
+        }
+        #nextBtn {
+          right: 1rem;
+        }
+        .slide-counter {
+          bottom: 1rem;
+          font-size: 0.75rem;
+          padding: 0.25rem 0.75rem;
+        }
+        .text-5xl {
+          font-size: 2rem !important;
+        }
+        .text-4xl {
+          font-size: 1.75rem !important;
+        }
+        .text-2xl {
+          font-size: 1.25rem !important;
+        }
+        .text-xl {
+          font-size: 1.125rem !important;
+        }
+        .text-lg {
+          font-size: 1rem !important;
+        }
+        .gap-8 {
+          gap: 0.75rem !important;
+        }
+        .gap-12 {
+          gap: 1rem !important;
+        }
+        .mb-12 {
+          margin-bottom: 1.5rem !important;
+        }
+        .mt-12 {
+          margin-top: 1.5rem !important;
+        }
+        .mt-8 {
+          margin-top: 0.75rem !important;
+        }
+        .mb-4 {
+          margin-bottom: 0.75rem !important;
+        }
+        .p-6 {
+          padding: 0.75rem !important;
+        }
+        .py-3 {
+          padding-top: 0.5rem !important;
+          padding-bottom: 0.5rem !important;
+        }
+        .px-8 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        .px-6 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        .px-4 {
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
+        }
+        .text-center {
+          text-align: center !important;
+        }
+        .text-left {
+          text-align: left !important;
+        }
+        .items-center {
+          align-items: center !important;
+        }
+        .justify-center {
+          justify-content: center !important;
+        }
+        .justify-between {
+          justify-content: space-between !important;
+        }
+        .flex-col {
+          flex-direction: column !important;
+        }
+        .flex-row {
+          flex-direction: row !important;
+        }
+        .grid-cols-1 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .grid-cols-2 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .grid-cols-3 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .grid-cols-4 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .md\\:grid-cols-2 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .md\\:grid-cols-3 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .lg\\:grid-cols-4 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .md\\:flex-row {
+          flex-direction: column !important;
+        }
+        .md\\:text-5xl {
+          font-size: 2rem !important;
+        }
+        .md\\:text-8xl {
+          font-size: 3rem !important;
+        }
+        .md\\:text-2xl {
+          font-size: 1.25rem !important;
+        }
+        .md\\:text-6xl {
+          font-size: 2.5rem !important;
+        }
+        .md\\:grid-cols-2 {
+          grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .md\\:flex-row {
+          flex-direction: column !important;
+        }
+        .md\\:items-stretch {
+          align-items: center !important;
+        }
+        .md\\:justify-center {
+          justify-content: center !important;
+        }
+        .md\\:text-center {
+          text-align: center !important;
+        }
+        .md\\:text-left {
+          text-align: left !important;
+        }
+        .md\\:gap-8 {
+          gap: 0.75rem !important;
+        }
+        .md\\:gap-4 {
+          gap: 0.5rem !important;
+        }
+        .md\\:mb-12 {
+          margin-bottom: 1.5rem !important;
+        }
+        .md\\:mt-12 {
+          margin-top: 1.5rem !important;
+        }
+        .md\\:p-6 {
+          padding: 0.75rem !important;
+        }
+        .md\\:py-3 {
+          padding-top: 0.5rem !important;
+          padding-bottom: 0.5rem !important;
+        }
+        .md\\:px-8 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        .md\\:w-24 {
+          width: 3rem !important;
+        }
+        .md\\:h-24 {
+          height: 3rem !important;
+        }
+        .md\\:w-20 {
+          width: 2.5rem !important;
+        }
+        .md\\:h-20 {
+          height: 2.5rem !important;
+        }
+        .md\\:w-16 {
+          width: 2rem !important;
+        }
+        .md\\:h-16 {
+          height: 2rem !important;
+        }
+        .md\\:w-12 {
+          width: 1.5rem !important;
+        }
+        .md\\:h-12 {
+          height: 1.5rem !important;
+        }
+        .md\\:w-8 {
+          width: 1.25rem !important;
+        }
+        .md\\:h-8 {
+          height: 1.25rem !important;
+        }
+        .md\\:scale-110 {
+          transform: none !important;
+        }
+        .md\\:transform {
+          transform: none !important;
+        }
+        .absolute {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          transform: none !important;
+        }
+        .-top-4 {
+          top: auto !important;
+        }
+        .left-1\/2 {
+          left: auto !important;
+        }
+        .-translate-x-1\/2 {
+          transform: none !important;
+        }
+        .-translate-y-1\/2 {
+          transform: none !important;
+        }
+        .translate-x-1\/2 {
+          transform: none !important;
+        }
+        .translate-y-1\/2 {
+          transform: none !important;
+        }
+        .inset-0 {
+          top: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          left: auto !important;
+        }
+        .top-1\/2 {
+          top: auto !important;
+        }
+        .bottom-0 {
+          bottom: auto !important;
+        }
+        .right-0 {
+          right: auto !important;
+        }
+        .text-xs {
+          font-size: 0.625rem !important;
+        }
+        .text-center.mt-1 {
+          margin-top: 0.25rem !important;
+        }
+        .animate-spin-slow {
+          animation: none !important;
+        }
+        .animate-ping {
+          animation: none !important;
+        }
+        .animate-ping.delay-200 {
+          animation: none !important;
+        }
+        .animate-pulse {
+          animation: none !important;
+        }
+        .animate-bounce {
+          animation: none !important;
+        }
+        .animate-spin {
+          animation: none !important;
+        }
+        .animate-pulse {
+          animation: none !important;
+        }
+        .animate-ping {
+          animation: none !important;
+        }
+        .animate-ping.delay-200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-1900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-2900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-3900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-4900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-5900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-6900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-7900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-8900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9000 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9100 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9200 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9300 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9400 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9500 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9600 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9700 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9800 {
+          animation: none !important;
+        }
+        .animate-ping.delay-9900 {
+          animation: none !important;
+        }
+        .animate-ping.delay-10000 {
+          animation: none !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .slide {
+          padding: 0.25rem;
+        }
+        .phone-mockup {
+          width: 100vw;
+          max-width: 280px;
+          height: 350px;
+          border-radius: 20px;
+          padding: 3px;
+        }
+        .card {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+        .text-5xl {
+          font-size: 1.75rem !important;
+        }
+        .text-4xl {
+          font-size: 1.5rem !important;
+        }
+        .text-2xl {
+          font-size: 1.125rem !important;
+        }
+        .text-xl {
+          font-size: 1rem !important;
+        }
+        .gap-8 {
+          gap: 0.5rem !important;
+        }
+        .gap-12 {
+          gap: 0.75rem !important;
+        }
+        .mb-12 {
+          margin-bottom: 1rem !important;
+        }
+        .mt-12 {
+          margin-top: 1rem !important;
+        }
+        .w-80 {
+          width: 100% !important;
+          max-width: 240px !important;
+        }
+        .h-80 {
+          height: 240px !important;
+        }
+        .w-24 {
+          width: 2.5rem !important;
+        }
+        .h-24 {
+          height: 2.5rem !important;
+        }
+        .w-20 {
+          width: 2rem !important;
+        }
+        .h-20 {
+          height: 2rem !important;
+        }
+        .w-16 {
+          width: 1.5rem !important;
+        }
+        .h-16 {
+          height: 1.5rem !important;
+        }
+        .w-12 {
+          width: 1.25rem !important;
+        }
+        .h-12 {
+          height: 1.25rem !important;
+        }
+        .w-8 {
+          width: 1rem !important;
+        }
+        .h-8 {
+          height: 1rem !important;
+        }
+        .nav-arrow {
+          padding: 0.3rem;
+        }
+        .nav-arrow svg {
+          width: 1rem !important;
+          height: 1rem !important;
+        }
+        .slide-counter {
+          font-size: 0.625rem !important;
+          padding: 0.2rem 0.5rem !important;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .slide {
+          padding: 0.125rem;
+        }
+        .phone-mockup {
+          width: 100vw;
+          max-width: 260px;
+          height: 320px;
+          border-radius: 16px;
+          padding: 2px;
+        }
+        .text-5xl {
+          font-size: 1.5rem !important;
+        }
+        .text-4xl {
+          font-size: 1.25rem !important;
+        }
+        .text-2xl {
+          font-size: 1rem !important;
+        }
+        .text-xl {
+          font-size: 0.875rem !important;
+        }
+        .gap-8 {
+          gap: 0.375rem !important;
+        }
+        .gap-12 {
+          gap: 0.5rem !important;
+        }
+        .mb-12 {
+          margin-bottom: 0.75rem !important;
+        }
+        .mt-12 {
+          margin-top: 0.75rem !important;
+        }
+        .w-80 {
+          width: 100% !important;
+          max-width: 200px !important;
+        }
+        .h-80 {
+          height: 200px !important;
+        }
+        .w-24 {
+          width: 2rem !important;
+        }
+        .h-24 {
+          height: 2rem !important;
+        }
+        .w-20 {
+          width: 1.5rem !important;
+        }
+        .h-20 {
+          height: 1.5rem !important;
+        }
+        .w-16 {
+          width: 1.25rem !important;
+        }
+        .h-16 {
+          height: 1.25rem !important;
+        }
+        .w-12 {
+          width: 1rem !important;
+        }
+        .h-12 {
+          height: 1rem !important;
+        }
+        .w-8 {
+          width: 0.875rem !important;
+        }
+        .h-8 {
+          height: 0.875rem !important;
+        }
+        .nav-arrow {
+          padding: 0.25rem;
+        }
+        .nav-arrow svg {
+          width: 0.875rem !important;
+          height: 0.875rem !important;
+        }
+        .slide-counter {
+          font-size: 0.5rem !important;
+          padding: 0.15rem 0.4rem !important;
+        }
+      }
+
+      /* Landscape orientation adjustments */
+      @media (max-height: 600px) and (orientation: landscape) {
+        .slide {
+          padding: 0.5rem;
+          min-height: 100vh;
+        }
+        .phone-mockup {
+          width: 200px;
+          height: 300px;
+          padding: 3px;
+        }
+        .text-5xl {
+          font-size: 2rem !important;
+        }
+        .text-4xl {
+          font-size: 1.75rem !important;
+        }
+        .text-2xl {
+          font-size: 1.25rem !important;
+        }
+        .mb-12 {
+          margin-bottom: 1rem !important;
+        }
+        .mt-12 {
+          margin-top: 1rem !important;
+        }
+        .gap-8 {
+          gap: 0.75rem !important;
+        }
+        .gap-12 {
+          gap: 1rem !important;
+        }
+        .w-80 {
+          width: 100% !important;
+          max-width: 240px !important;
+        }
+        .h-80 {
+          height: 240px !important;
+        }
+        .w-24 {
+          width: 3rem !important;
+        }
+        .h-24 {
+          height: 3rem !important;
+        }
+        .w-20 {
+          width: 2.5rem !important;
+        }
+        .h-20 {
+          height: 2.5rem !important;
+        }
+        .w-16 {
+          width: 2rem !important;
+        }
+        .h-16 {
+          height: 2rem !important;
+        }
+        .w-12 {
+          width: 1.5rem !important;
+        }
+        .h-12 {
+          height: 1.5rem !important;
+        }
+        .w-8 {
+          width: 1.25rem !important;
+        }
+        .h-8 {
+          height: 1.25rem !important;
+        }
+      }
+
+      /* Touch device optimizations */
+      @media (hover: none) and (pointer: coarse) {
+        .nav-arrow {
+          min-width: 44px;
+          min-height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .nav-arrow:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        .bg-accent-dark:hover {
+          background-color: #6ba2ff;
+        }
+      }
+
+      /* High DPI displays */
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .card {
+          border-width: 0.5px;
+        }
+        .phone-mockup {
+          border-width: 1px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .nav-arrow,
+        .slide-counter {
+          display: none !important;
+        }
+        .slide {
+          position: static !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: none !important;
+          page-break-after: always;
+        }
+        body {
+          background: white !important;
+          color: black !important;
+        }
+        .card {
+          background: #f8f9fa !important;
+          border: 1px solid #dee2e6 !important;
+          color: black !important;
+        }
+        .phone-mockup {
+          border: 1px solid #ccc !important;
+          box-shadow: none !important;
+        }
       }
     </style>
   </head>
@@ -753,7 +1762,7 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L2.34 16c-.77 1.333.192 3 1.732 3z"
                 />
               </svg>
             </div>
