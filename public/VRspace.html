@@ -16,6 +16,7 @@
         font-family: "Inter", sans-serif;
         background-color: #0b2d6e; /* Darkest Blue from Palette */
         color: #e0e0e0;
+        overflow: hidden;
         margin: 0;
         padding: 0;
       }
@@ -24,17 +25,24 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 1rem;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.8s ease-in-out, visibility 0.8s,
           transform 0.8s ease-in-out;
         transform: translateY(20px);
+        overflow-y: auto;
+      }
+      @media (min-width: 768px) {
+        .slide {
+          padding: 2rem;
+        }
       }
       .slide.active {
         opacity: 1;
@@ -47,28 +55,33 @@
         transform: translateY(-50%);
         background-color: rgba(255, 255, 255, 0.1);
         color: white;
-        padding: 0.75rem;
+        padding: 0.5rem;
         border-radius: 50%;
         cursor: pointer;
         transition: background-color 0.3s;
         z-index: 100;
       }
+      @media (min-width: 768px) {
+        .nav-arrow {
+          padding: 0.75rem;
+        }
+      }
       .nav-arrow:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
       #prevBtn {
-        left: 2rem;
+        left: 1rem;
       }
       #nextBtn {
-        right: 2rem;
+        right: 1rem;
       }
       .slide-counter {
         position: fixed;
-        bottom: 2rem;
+        bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.75rem;
         background-color: rgba(0, 0, 0, 0.2);
         padding: 0.5rem 1rem;
         border-radius: 99px;
@@ -92,7 +105,12 @@
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(107, 162, 255, 0.2);
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .card {
+          padding: 2rem;
+        }
       }
       .benefit-icon {
         background-color: rgba(107, 162, 255, 0.1);
@@ -104,430 +122,20 @@
       }
       .tech-stack-item {
         display: flex;
+        flex-direction: column;
+        text-align: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
         background: rgba(255, 255, 255, 0.05);
         padding: 1.5rem;
         border-radius: 1rem;
         border: 1px solid rgba(107, 162, 255, 0.2);
       }
-
-      /* Responsive Breakpoints */
-      @media (max-width: 1024px) {
-        .slide {
-          padding: 1.5rem;
-        }
-        .card {
-          padding: 1.5rem;
-        }
+      @media (min-width: 768px) {
         .tech-stack-item {
-          padding: 1rem;
-          gap: 1rem;
-        }
-        .tech-stack-item img {
-          width: 60px !important;
-          height: 60px !important;
-        }
-        h1 {
-          font-size: clamp(3rem, 8vw, 6rem) !important;
-        }
-        h2 {
-          font-size: clamp(2rem, 6vw, 4rem) !important;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .slide {
-          padding: 1rem;
-          min-height: 100vh;
-          height: auto;
-          position: static;
-        }
-        .card {
-          padding: 1rem;
-        }
-        .tech-stack-item {
-          flex-direction: column;
-          text-align: center;
-          gap: 0.75rem;
-        }
-        .tech-stack-item img {
-          width: 48px !important;
-          height: 48px !important;
-        }
-        .nav-arrow {
-          top: unset;
-          bottom: 1rem;
-          transform: none;
-          padding: 0.5rem;
-        }
-        #prevBtn {
-          left: 1rem;
-        }
-        #nextBtn {
-          right: 1rem;
-        }
-        .slide-counter {
-          bottom: 1rem;
-          font-size: 0.75rem;
-          padding: 0.25rem 0.75rem;
-        }
-        .grid {
-          grid-template-columns: 1fr !important;
-        }
-        .flex {
-          flex-direction: column !important;
-        }
-        .text-5xl {
-          font-size: 2.5rem !important;
-        }
-        .text-4xl {
-          font-size: 2rem !important;
-        }
-        .text-2xl {
-          font-size: 1.5rem !important;
-        }
-        .text-xl {
-          font-size: 1.25rem !important;
-        }
-        .gap-8 {
-          gap: 1rem !important;
-        }
-        .gap-12 {
-          gap: 1.5rem !important;
-        }
-        .mb-12 {
-          margin-bottom: 2rem !important;
-        }
-        .mt-12 {
-          margin-top: 2rem !important;
-        }
-        .p-6 {
-          padding: 1rem !important;
-        }
-        .py-4 {
-          padding-top: 1rem !important;
-          padding-bottom: 1rem !important;
-        }
-        .px-8 {
-          padding-left: 1.5rem !important;
-          padding-right: 1.5rem !important;
-        }
-        .w-32 {
-          width: 6rem !important;
-        }
-        .h-32 {
-          height: 6rem !important;
-        }
-        .w-24 {
-          width: 4rem !important;
-        }
-        .h-24 {
-          height: 4rem !important;
-        }
-        .h-8 {
-          height: 1.5rem !important;
-        }
-        .w-8 {
-          width: 1.5rem !important;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .slide {
-          padding: 0.5rem;
-        }
-        .card {
-          padding: 0.75rem;
-          border-radius: 0.5rem;
-        }
-        .benefit-icon {
-          padding: 0.5rem;
-        }
-        .benefit-icon svg {
-          width: 1.5rem !important;
-          height: 1.5rem !important;
-        }
-        .tech-stack-item {
-          padding: 0.75rem;
-          border-radius: 0.5rem;
-        }
-        .tech-stack-item img {
-          width: 40px !important;
-          height: 40px !important;
-        }
-        .nav-arrow {
-          padding: 0.4rem;
-        }
-        .nav-arrow svg {
-          width: 1.25rem !important;
-          height: 1.25rem !important;
-        }
-        .text-5xl {
-          font-size: 2rem !important;
-        }
-        .text-4xl {
-          font-size: 1.75rem !important;
-        }
-        .text-2xl {
-          font-size: 1.25rem !important;
-        }
-        .text-xl {
-          font-size: 1.125rem !important;
-        }
-        .text-lg {
-          font-size: 1rem !important;
-        }
-        .gap-8 {
-          gap: 0.75rem !important;
-        }
-        .gap-12 {
-          gap: 1rem !important;
-        }
-        .mb-12 {
-          margin-bottom: 1.5rem !important;
-        }
-        .mt-12 {
-          margin-top: 1.5rem !important;
-        }
-        .mt-4 {
-          margin-top: 0.75rem !important;
-        }
-        .mb-4 {
-          margin-bottom: 0.75rem !important;
-        }
-        .p-6 {
-          padding: 0.75rem !important;
-        }
-        .py-4 {
-          padding-top: 0.75rem !important;
-          padding-bottom: 0.75rem !important;
-        }
-        .px-8 {
-          padding-left: 1rem !important;
-          padding-right: 1rem !important;
-        }
-        .w-32 {
-          width: 5rem !important;
-        }
-        .h-32 {
-          height: 5rem !important;
-        }
-        .w-24 {
-          width: 3rem !important;
-        }
-        .h-24 {
-          height: 3rem !important;
-        }
-        .rounded-2xl {
-          border-radius: 0.5rem !important;
-        }
-        .rounded-xl {
-          border-radius: 0.375rem !important;
-        }
-        .p-2 {
-          padding: 0.25rem !important;
-        }
-        .mt-4 {
-          margin-top: 0.5rem !important;
-        }
-        .text-sm {
-          font-size: 0.75rem !important;
-        }
-        .max-w-xs {
-          max-width: 100% !important;
-        }
-        .max-w-3xl {
-          max-width: 100% !important;
-        }
-        .max-w-4xl {
-          max-width: 100% !important;
-        }
-        .max-w-5xl {
-          max-width: 100% !important;
-        }
-        .max-w-6xl {
-          max-width: 100% !important;
-        }
-        .transform {
-          transform: none !important;
-        }
-        .md\\:scale-110 {
-          transform: none !important;
-        }
-        .absolute {
-          position: relative !important;
-          top: auto !important;
-          left: auto !important;
-          transform: none !important;
-        }
-        .-top-4 {
-          top: auto !important;
-        }
-        .left-1\/2 {
-          left: auto !important;
-        }
-        .-translate-x-1\/2 {
-          transform: none !important;
-        }
-        .text-sm.font-bold.bg-blue-400 {
-          display: inline-block !important;
-          margin-bottom: 0.5rem !important;
-          position: static !important;
-        }
-      }
-
-      @media (max-width: 360px) {
-        .slide {
-          padding: 0.25rem;
-        }
-        .card {
-          padding: 0.5rem;
-        }
-        .text-5xl {
-          font-size: 1.75rem !important;
-        }
-        .text-4xl {
-          font-size: 1.5rem !important;
-        }
-        .text-2xl {
-          font-size: 1.125rem !important;
-        }
-        .text-xl {
-          font-size: 1rem !important;
-        }
-        .gap-8 {
-          gap: 0.5rem !important;
-        }
-        .gap-12 {
-          gap: 0.75rem !important;
-        }
-        .mb-12 {
-          margin-bottom: 1rem !important;
-        }
-        .mt-12 {
-          margin-top: 1rem !important;
-        }
-        .w-32 {
-          width: 4rem !important;
-        }
-        .h-32 {
-          height: 4rem !important;
-        }
-        .w-24 {
-          width: 2.5rem !important;
-        }
-        .h-24 {
-          height: 2.5rem !important;
-        }
-        .nav-arrow {
-          padding: 0.3rem;
-        }
-        .nav-arrow svg {
-          width: 1rem !important;
-          height: 1rem !important;
-        }
-        .slide-counter {
-          font-size: 0.625rem !important;
-          padding: 0.2rem 0.5rem !important;
-        }
-      }
-
-      /* Landscape orientation adjustments */
-      @media (max-height: 600px) and (orientation: landscape) {
-        .slide {
-          padding: 0.5rem;
-          min-height: 100vh;
-        }
-        .card {
-          padding: 0.75rem;
-        }
-        .tech-stack-item {
-          padding: 0.75rem;
-        }
-        .text-5xl {
-          font-size: 2rem !important;
-        }
-        .text-4xl {
-          font-size: 1.75rem !important;
-        }
-        .text-2xl {
-          font-size: 1.25rem !important;
-        }
-        .mb-12 {
-          margin-bottom: 1rem !important;
-        }
-        .mt-12 {
-          margin-top: 1rem !important;
-        }
-        .gap-8 {
-          gap: 0.75rem !important;
-        }
-        .gap-12 {
-          gap: 1rem !important;
-        }
-        .w-32 {
-          width: 5rem !important;
-        }
-        .h-32 {
-          height: 5rem !important;
-        }
-        .w-24 {
-          width: 3rem !important;
-        }
-        .h-24 {
-          height: 3rem !important;
-        }
-      }
-
-      /* Touch device optimizations */
-      @media (hover: none) and (pointer: coarse) {
-        .nav-arrow {
-          min-width: 44px;
-          min-height: 44px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .nav-arrow:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
-        .bg-accent-hover:hover {
-          background-color: #6ba2ff;
-        }
-      }
-
-      /* High DPI displays */
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .card {
-          border-width: 0.5px;
-        }
-        .tech-stack-item {
-          border-width: 0.5px;
-        }
-      }
-
-      /* Print styles */
-      @media print {
-        .nav-arrow,
-        .slide-counter {
-          display: none !important;
-        }
-        .slide {
-          position: static !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          transform: none !important;
-          page-break-after: always;
-        }
-        body {
-          background: white !important;
-          color: black !important;
-        }
-        .card {
-          background: #f8f9fa !important;
-          border: 1px solid #dee2e6 !important;
-          color: black !important;
+          flex-direction: row;
+          text-align: left;
+          gap: 1.5rem;
         }
       }
     </style>
@@ -537,7 +145,7 @@
     <section id="slide1" class="slide active">
       <div class="text-center">
         <svg
-          class="mx-auto mb-4 h-24 w-24 text-accent"
+          class="mx-auto mb-4 h-20 w-20 md:h-24 md:w-24 text-accent"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -550,8 +158,10 @@
             d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
           />
         </svg>
-        <h1 class="text-6xl md:text-8xl font-extrabold text-white">VRspace</h1>
-        <p class="mt-4 text-xl md:text-2xl text-gray-300 tracking-wide">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold text-white">
+          VRspace
+        </h1>
+        <p class="mt-4 text-lg md:text-2xl text-gray-300 tracking-wide">
           Step Into Tomorrow's Spaces, Today.
         </p>
       </div>
@@ -559,31 +169,29 @@
 
     <!-- SLIDE 2: The Problem -->
     <section id="slide2" class="slide">
-      <div class="text-center max-w-5xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+      <div class="text-center max-w-5xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12">
           The Old Way of Selling Real Estate is Broken
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
           <div class="card">
-            <h3 class="text-2xl font-semibold text-accent mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold text-accent mb-3">
               Costly Physical Models
             </h3>
-            <p class="text-gray-300">
+            <p class="text-gray-300 text-base md:text-lg">
               Constructing a single dummy flat costs lakhs (₹2-2.5 lakhs
               typical) and represents only one design possibility. This
-              investment is static, inflexible, and doesn't scale across
-              multiple projects.
+              investment is static, inflexible, and doesn't scale.
             </p>
           </div>
           <div class="card">
-            <h3 class="text-2xl font-semibold text-accent mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold text-accent mb-3">
               Limited Imagination
             </h3>
-            <p class="text-gray-300">
+            <p class="text-gray-300 text-base md:text-lg">
               2D blueprints and artist renders are flat and uninspiring. They
               fail to convey the true sense of space, scale, and atmosphere,
-              leaving too much to a buyer's imagination and creating a
-              disconnect.
+              leaving too much to a buyer's imagination.
             </p>
           </div>
         </div>
@@ -592,34 +200,41 @@
 
     <!-- SLIDE 3: The Solution -->
     <section id="slide3" class="slide">
-      <div class="text-center max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-bold">
+      <div class="text-center max-w-4xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold">
           Introducing VRspace: Immersive VR Walkthroughs
         </h2>
-        <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+        <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
           We transform your architectural plans into fully walkable,
           photorealistic virtual spaces. Allow clients to experience their
-          future home, office, or shop before a single brick is laid. It's not
-          just a viewing; it's an experience.
+          future home, office, or shop before a single brick is laid.
         </p>
-        <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center">
-          <div class="text-center p-6 card">
-            <h3 class="text-2xl font-bold text-accent">Sell Faster</h3>
-            <p class="mt-2 text-gray-300">
+        <div
+          class="mt-8 md:mt-12 flex flex-col md:flex-row gap-6 md:gap-8 justify-center"
+        >
+          <div class="text-center p-4 md:p-6 card">
+            <h3 class="text-xl md:text-2xl font-bold text-accent">
+              Sell Faster
+            </h3>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">
               Immersive experiences create emotional connections, leading to
               quicker client conversions.
             </p>
           </div>
-          <div class="text-center p-6 card">
-            <h3 class="text-2xl font-bold text-accent">Save Millions</h3>
-            <p class="mt-2 text-gray-300">
+          <div class="text-center p-4 md:p-6 card">
+            <h3 class="text-xl md:text-2xl font-bold text-accent">
+              Save Millions
+            </h3>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">
               Eliminate the cost of multiple dummy flats and physical model
               productions.
             </p>
           </div>
-          <div class="text-center p-6 card">
-            <h3 class="text-2xl font-bold text-accent">Showcase Everything</h3>
-            <p class="mt-2 text-gray-300">
+          <div class="text-center p-4 md:p-6 card">
+            <h3 class="text-xl md:text-2xl font-bold text-accent">
+              Showcase Everything
+            </h3>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">
               Display countless design variants, layouts, and furnishing options
               instantly.
             </p>
@@ -630,42 +245,45 @@
 
     <!-- SLIDE 4: How It Works -->
     <section id="slide4" class="slide">
-      <div class="text-center max-w-5xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">
-          Powered by Cutting-Edge Technology for Unmatched Realism
+      <div class="text-center max-w-5xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12">
+          Powered by Cutting-Edge Technology
         </h2>
         <div
-          class="flex flex-col md:flex-row items-stretch justify-center gap-8 w-full"
+          class="flex flex-col lg:flex-row items-stretch justify-center gap-6 md:gap-8 w-full"
         >
           <!-- Unreal Engine -->
           <div class="tech-stack-item flex-1">
             <img
-              src="https://img.icons8.com/ios-filled/100/6ba2ff/unreal-engine.png"
+              src="https://img.icons8.com/ios-filled/80/6ba2ff/unreal-engine.png"
               alt="Unreal Engine Logo"
-              class="w-24 h-24"
+              class="w-20 h-20"
             />
             <div>
-              <h3 class="text-2xl font-bold text-white">Unreal Engine 5</h3>
-              <p class="text-lg text-gray-300 mt-2">
-                We use the world's most advanced real-time 3D creation tool to
-                build experiences with lifelike lighting, materials, and
-                textures that are indistinguishable from reality.
+              <h3 class="text-xl md:text-2xl font-bold text-white">
+                Unreal Engine 5
+              </h3>
+              <p class="text-base md:text-lg text-gray-300 mt-2">
+                We use the world's most advanced real-time 3D creation tool for
+                experiences with lifelike lighting, materials, and textures.
               </p>
             </div>
           </div>
           <!-- Meta Quest 3 -->
           <div class="tech-stack-item flex-1">
             <img
-              src="https://img.icons8.com/ios-filled/100/6ba2ff/virtual-reality.png"
+              src="https://img.icons8.com/ios-filled/80/6ba2ff/virtual-reality.png"
               alt="VR Headset"
-              class="w-24 h-24"
+              class="w-20 h-20"
             />
             <div>
-              <h3 class="text-2xl font-bold text-white">Meta Quest 3</h3>
-              <p class="text-lg text-gray-300 mt-2">
+              <h3 class="text-xl md:text-2xl font-bold text-white">
+                Meta Quest 3
+              </h3>
+              <p class="text-base md:text-lg text-gray-300 mt-2">
                 Clients can freely walk through your spaces without cables,
-                using the latest in consumer VR technology for a comfortable,
-                intuitive, and deeply immersive experience.
+                using the latest in VR technology for a comfortable and
+                intuitive experience.
               </p>
             </div>
           </div>
@@ -675,16 +293,16 @@
 
     <!-- SLIDE 5: Features -->
     <section id="slide5" class="slide">
-      <div class="text-center max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">
-          More Than a 360° Tour. A Fully Interactive World.
+      <div class="text-center max-w-6xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12">
+          A Fully Interactive World
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="card text-center">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+          <div class="card text-center p-4">
             <div class="benefit-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
+                class="h-6 w-6 md:h-8 md:w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -697,17 +315,17 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold">True Walkable Spaces</h3>
-            <p class="text-gray-400 mt-2">
-              Physically walk around, inspect details, and experience the
-              natural flow and scale of the property.
+            <h3 class="text-lg md:text-xl font-bold">Walkable Spaces</h3>
+            <p class="text-gray-400 mt-2 text-sm">
+              Physically walk around and experience the natural flow and scale
+              of the property.
             </p>
           </div>
-          <div class="card text-center">
+          <div class="card text-center p-4">
             <div class="benefit-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
+                class="h-6 w-6 md:h-8 md:w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -720,17 +338,17 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold">Multiple Design Variants</h3>
-            <p class="text-gray-400 mt-2">
-              Showcase different interior themes, flooring, wall colors, and
-              furniture layouts in real-time.
+            <h3 class="text-lg md:text-xl font-bold">Design Variants</h3>
+            <p class="text-gray-400 mt-2 text-sm">
+              Showcase different interior themes, flooring, and wall colors in
+              real-time.
             </p>
           </div>
-          <div class="card text-center">
+          <div class="card text-center p-4">
             <div class="benefit-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
+                class="h-6 w-6 md:h-8 md:w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -743,17 +361,17 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold">Realistic Lighting</h3>
-            <p class="text-gray-400 mt-2">
+            <h3 class="text-lg md:text-xl font-bold">Realistic Lighting</h3>
+            <p class="text-gray-400 mt-2 text-sm">
               Experience how natural and artificial light interacts with the
-              space at different times of the day.
+              space.
             </p>
           </div>
-          <div class="card text-center">
+          <div class="card text-center p-4">
             <div class="benefit-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
+                class="h-6 w-6 md:h-8 md:w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -771,10 +389,10 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold">Buyer Personalization</h3>
-            <p class="text-gray-400 mt-2">
+            <h3 class="text-lg md:text-xl font-bold">Personalization</h3>
+            <p class="text-gray-400 mt-2 text-sm">
               Allow clients to make customization choices live in VR, finalizing
-              their dream space on the spot.
+              their space on the spot.
             </p>
           </div>
         </div>
@@ -783,18 +401,20 @@
 
     <!-- SLIDE 6: Visual Demo -->
     <section id="slide6" class="slide">
-      <div class="text-center max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8">
+      <div class="text-center max-w-6xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">
           Uncompromising Visual Fidelity
         </h2>
-        <div class="bg-black rounded-2xl shadow-2xl p-2 border border-gray-700">
+        <div
+          class="bg-black rounded-xl md:rounded-2xl shadow-2xl p-2 border border-gray-700"
+        >
           <img
             src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2080&auto=format&fit=crop"
             alt="VR walkthrough of a modern living room"
-            class="rounded-xl"
+            class="rounded-lg md:rounded-xl w-full h-auto"
             onerror="this.onerror=null;this.src='https://placehold.co/1200x675/0b2d6e/ffffff?text=VRspace+VR+Demo';"
           />
-          <p class="text-gray-400 mt-4 text-sm">
+          <p class="text-gray-400 mt-2 md:mt-4 text-xs md:text-sm">
             Rendered in Unreal Engine 5, experienced on Meta Quest 3.
           </p>
         </div>
@@ -803,27 +423,30 @@
 
     <!-- SLIDE 7: Market Opportunity -->
     <section id="slide7" class="slide">
-      <div class="text-center max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+      <div class="text-center max-w-4xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12">
           Tapping into a Multi-Trillion Rupee Market
         </h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
           The Indian real estate market is projected to reach
-          <span class="text-accent font-bold">$1 Trillion USD</span> by 2030. In
-          this competitive landscape, technology is the key differentiator for
-          developers looking to attract premium buyers.
+          <span class="text-accent font-bold">$1 Trillion USD</span> by 2030.
+          Technology is the key differentiator for attracting premium buyers.
         </p>
-        <div class="mt-12 flex justify-center items-center gap-8 w-full">
-          <div class="card text-center flex-1">
-            <p class="text-5xl font-bold text-accent">₹80 Lakh Cr</p>
-            <p class="text-lg text-gray-400 mt-2">
+        <div
+          class="mt-8 md:mt-12 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 w-full"
+        >
+          <div class="card text-center flex-1 w-full">
+            <p class="text-4xl md:text-5xl font-bold text-accent">
+              ₹80 Lakh Cr
+            </p>
+            <p class="text-base md:text-lg text-gray-400 mt-2">
               Projected Market Size by 2030
             </p>
           </div>
-          <div class="card text-center flex-1">
-            <p class="text-5xl font-bold text-accent">15-20%</p>
-            <p class="text-lg text-gray-400 mt-2">
-              Annual Growth Rate in the Housing Sector
+          <div class="card text-center flex-1 w-full">
+            <p class="text-4xl md:text-5xl font-bold text-accent">15-20%</p>
+            <p class="text-base md:text-lg text-gray-400 mt-2">
+              Annual Growth in Housing
             </p>
           </div>
         </div>
@@ -833,14 +456,14 @@
     <!-- SLIDE 8: Business Model -->
     <section id="slide8" class="slide">
       <div class="w-full max-w-6xl">
-        <h2 class="text-center text-4xl md:text-5xl font-bold mb-12">
+        <h2 class="text-center text-3xl md:text-5xl font-bold mb-8 md:mb-12">
           Flexible Pricing for Every Project Scale
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card text-center border-2 border-accent shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4">
+          <div class="card text-center">
             <h3 class="text-2xl font-bold text-accent">Per Project</h3>
             <p class="text-4xl font-bold my-4">Custom Quote</p>
-            <ul class="text-left space-y-2 text-gray-300">
+            <ul class="text-left space-y-2 text-gray-300 mx-auto max-w-xs">
               <li>
                 <span class="text-accent">✓</span> Ideal for single buildings
               </li>
@@ -853,15 +476,15 @@
             </ul>
           </div>
           <div
-            class="card text-center transform md:scale-110 bg-[#0b2d6e] shadow-2xl border-2 border-blue-400"
+            class="card text-center relative lg:scale-110 bg-[#0b2d6e] shadow-2xl border-2 border-blue-400 my-8 lg:my-0"
           >
             <span
-              class="text-sm font-bold bg-blue-400 text-black py-1 px-3 rounded-full absolute -top-4 left-1\/2 -translate-x-1\/2"
-              >MOST POPULAR</span
+              class="text-sm font-bold bg-blue-400 text-black py-1 px-3 rounded-full absolute -top-4 left-1/2 -translate-x-1/2"
+              >POPULAR</span
             >
             <h3 class="text-2xl font-bold text-blue-400">Per Sq. Ft.</h3>
             <p class="text-4xl font-bold my-4">Tiered Rates</p>
-            <ul class="text-left space-y-2 text-gray-300">
+            <ul class="text-left space-y-2 text-gray-300 mx-auto max-w-xs">
               <li>
                 <span class="text-blue-400">✓</span> For large-scale projects
               </li>
@@ -877,7 +500,7 @@
           <div class="card text-center">
             <h3 class="text-2xl font-bold text-accent">Subscription</h3>
             <p class="text-4xl font-bold my-4">Annual License</p>
-            <ul class="text-left space-y-2 text-gray-300">
+            <ul class="text-left space-y-2 text-gray-300 mx-auto max-w-xs">
               <li><span class="text-accent">✓</span> For large developers</li>
               <li>
                 <span class="text-accent">✓</span> Continuous project pipeline
@@ -891,35 +514,35 @@
 
     <!-- SLIDE 9: Team -->
     <section id="slide9" class="slide">
-      <div class="text-center max-w-4xl">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+      <div class="text-center max-w-4xl w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12">
           The Minds Behind the Space
         </h2>
         <div
-          class="flex flex-col md:flex-row justify-center items-center gap-12"
+          class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12"
         >
           <div class="text-center">
             <img
-              class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent"
+              class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 border-4 border-accent"
               src="https://placehold.co/128x128/E0E0E0/0b2d6e?text=AK"
               alt="Founder 1"
             />
-            <h3 class="text-2xl font-bold">Aarav Kumar</h3>
+            <h3 class="text-xl md:text-2xl font-bold">Aarav Kumar</h3>
             <p class="text-accent font-semibold">Founder & CEO</p>
-            <p class="text-gray-400 mt-2 max-w-xs">
-              10+ years in real estate marketing. Understands the developer's
-              pain points inside and out.
+            <p class="text-gray-400 mt-2 max-w-xs text-sm md:text-base">
+              10+ years in real estate marketing. Understands developer pain
+              points inside and out.
             </p>
           </div>
           <div class="text-center">
             <img
-              class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent"
+              class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 border-4 border-accent"
               src="https://placehold.co/128x128/E0E0E0/0b2d6e?text=SP"
               alt="Founder 2"
             />
-            <h3 class="text-2xl font-bold">Saanvi Patel</h3>
+            <h3 class="text-xl md:text-2xl font-bold">Saanvi Patel</h3>
             <p class="text-accent font-semibold">CTO & Lead Developer</p>
-            <p class="text-gray-400 mt-2 max-w-xs">
+            <p class="text-gray-400 mt-2 max-w-xs text-sm md:text-base">
               Unreal Engine expert with a background in architectural
               visualization and game development.
             </p>
@@ -932,7 +555,7 @@
     <section id="slide10" class="slide">
       <div class="text-center">
         <svg
-          class="mx-auto mb-4 h-24 w-24 text-accent"
+          class="mx-auto mb-4 h-20 w-20 md:h-24 md:w-24 text-accent"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -948,18 +571,20 @@
         <h2 class="text-4xl md:text-6xl font-extrabold text-white">
           Let's Build the Future of Real Estate.
         </h2>
-        <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl">
+        <p class="mt-4 text-lg md:text-2xl text-gray-300 max-w-3xl">
           Ready to revolutionize how you sell properties? Schedule a
           personalized demo today.
         </p>
         <div class="mt-12">
           <a
             href="mailto:demo@vrspace.io"
-            class="bg-accent text-white font-bold py-4 px-8 rounded-lg text-lg bg-accent-hover transition-colors"
+            class="bg-accent text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-lg text-base md:text-lg bg-accent-hover transition-colors"
             >Book Your Live Demo</a
           >
         </div>
-        <p class="mt-8 text-gray-400">demo@vrspace.io | vrspace.io</p>
+        <p class="mt-8 text-gray-400 text-sm md:text-base">
+          demo@vrspace.io | vrspace.io
+        </p>
       </div>
     </section>
 
@@ -1034,6 +659,24 @@
         document.addEventListener("keydown", (e) => {
           if (e.key === "ArrowRight") nextSlide();
           else if (e.key === "ArrowLeft") prevSlide();
+        });
+
+        // Touch swipe navigation
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        function handleGesture() {
+          if (touchendX < touchstartX) nextSlide();
+          if (touchendX > touchstartX) prevSlide();
+        }
+
+        document.body.addEventListener("touchstart", (e) => {
+          touchstartX = e.changedTouches[0].screenX;
+        });
+
+        document.body.addEventListener("touchend", (e) => {
+          touchendX = e.changedTouches[0].screenX;
+          handleGesture();
         });
 
         showSlide(currentSlide);
