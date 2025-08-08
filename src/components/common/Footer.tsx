@@ -70,7 +70,7 @@ export function Footer() {
               Connect With Us
             </h3>
             <div className="space-y-1">
-              <p className="text-sm text-primary">Email: dhaarita@gmail.com</p>
+              <p className="text-sm text-primary">Email: founder@dharita.in</p>
               <p className="text-sm text-primary">
                 Address: Pulak City, Silicon City, Indore
               </p>
